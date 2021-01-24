@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-05T18:24:30 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IssueBook" pageWidth="300" pageHeight="400" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="995c420e-3ed6-4527-93e7-60b882078f7f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Library Data Adapter "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from borrow_details]]>
+	</queryString>
+	<field name="BorrowID" class="java.lang.String"/>
+	<field name="BID" class="java.lang.String"/>
+	<field name="RegID" class="java.lang.String"/>
+	<field name="BorrowDate" class="java.lang.String"/>
+	<field name="BookQty" class="java.lang.String"/>
+	<group name="BorrowID">
+		<groupExpression><![CDATA[$F{BorrowID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="180" height="30" forecolor="#FF0400" uuid="f28233be-bb55-4d79-a385-24176130a348"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issued Book]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="130" height="20" uuid="90897301-6f17-4ffa-9c05-d52929b73b2f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BorrowID            :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="0" width="75" height="17" uuid="3d4c4dcf-e9e2-415d-abba-f532e191cecc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BorrowID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="30" width="130" height="20" uuid="65594d47-b01a-4df9-8066-3f3070b39719"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BID                      :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="30" width="100" height="20" uuid="5f3137f5-7078-4281-9b58-0926a12c9578"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="60" width="130" height="20" uuid="88b74ee8-d8f0-4a76-9b90-42906206e22c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RegID                  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="60" width="100" height="20" uuid="7cc5fe75-b27a-42f5-80d5-da62af7f84b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RegID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="90" width="130" height="22" uuid="3b82529c-8abe-4d31-9f19-f8398b9614bd"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BorrowDate        :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="90" width="100" height="22" uuid="23cab527-36e7-4f3d-8dd7-ae409a9c8513"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BorrowDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="120" width="130" height="20" uuid="46dfe357-25a3-44a6-943d-d7df056bb2f7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BookQty             :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="120" width="100" height="20" uuid="19d857fe-b20e-4bc6-830b-38650e571880"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BookQty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="18" width="90" height="14" uuid="ceb15125-446c-4109-a884-f54e06f7f976"/>
+				<text><![CDATA[Software By Hansi]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="180" y="0" width="90" height="19" uuid="9937b799-7a90-45d2-9a2d-012699c3a2e0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

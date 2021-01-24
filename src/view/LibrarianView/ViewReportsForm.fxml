@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.ViewReportsFormController">
+   <children>
+      <AnchorPane prefHeight="438.0" prefWidth="972.0" style="-fx-background-color: gray;">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="53.0" prefWidth="972.0" text="View Reports">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

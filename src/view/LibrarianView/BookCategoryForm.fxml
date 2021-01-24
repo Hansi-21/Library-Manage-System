@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="448.0" prefWidth="881.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LibrarianController.BookCategoryFormController">
+   <children>
+      <Label alignment="CENTER" layoutY="23.0" prefHeight="53.0" prefWidth="881.0" text="Book Category ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtID" labelFloat="true" layoutX="62.0" layoutY="98.0" prefHeight="25.0" prefWidth="225.0" promptText="Category ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="62.0" layoutY="173.0" prefHeight="25.0" prefWidth="225.0" promptText="Category Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton layoutX="182.0" layoutY="242.0" onAction="#AddCategoryOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: red;" text="Add Category" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imgePrevious" fitHeight="37.0" fitWidth="101.0" layoutX="49.0" layoutY="371.0" onMouseClicked="#PreviousMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/coollogo_com-2910960.gif" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblCategory" layoutX="429.0" layoutY="124.0" prefHeight="236.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="106.0" text="Category ID" />
+          <TableColumn fx:id="colName" prefWidth="183.0" text="Category Name" />
+            <TableColumn fx:id="colOperate" prefWidth="128.0" text="Operate" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="322.0" layoutY="242.0" onAction="#UpdateBookOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #16a085;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

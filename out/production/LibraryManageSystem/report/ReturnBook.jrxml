@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-05T19:07:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReturnBook" pageWidth="300" pageHeight="400" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53b4abae-b1d4-4cdf-bf3e-34211b4c9a2f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Library Data Adapter "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from borrow_details]]>
+	</queryString>
+	<field name="BorrowID" class="java.lang.String"/>
+	<field name="BID" class="java.lang.String"/>
+	<field name="RegID" class="java.lang.String"/>
+	<field name="BorrowDate" class="java.lang.String"/>
+	<field name="ReturnDate" class="java.lang.String"/>
+	<field name="ReturnCost" class="java.lang.String"/>
+	<field name="BookQty" class="java.lang.String"/>
+	<group name="BorrowID">
+		<groupExpression><![CDATA[$F{BorrowID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="180" height="30" forecolor="#FF0400" uuid="bca7111c-b07d-45cb-b730-6db537c9c8ea"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Book]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="207" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="130" height="20" uuid="1cc7409e-4d1c-4f0f-85f1-b3912c785387"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BorrowID              :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="0" width="70" height="17" uuid="464c405d-e94e-4448-84da-bc4d61403ef1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BorrowID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="30" width="128" height="20" uuid="92090682-fff8-4921-ab23-6b7fa923a937"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BID                        :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="30" width="70" height="16" uuid="7a472d5a-e94c-4cb1-9f64-4489e725bc53"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="60" width="130" height="20" uuid="2cf78311-9cd0-4f7f-8e52-7e7ebb7c8a28"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RegID                    :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="60" width="68" height="16" uuid="b275667b-f739-4d63-9bb2-0bda9beb6a54"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RegID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="90" width="130" height="20" uuid="85de64c1-38bf-4126-a71a-bebb0671dde5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrow Date         :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="90" width="84" height="16" uuid="fbd80649-94ad-4657-af65-fe560fcd27c0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BorrowDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="120" width="131" height="20" uuid="00074a48-7389-4df9-a5c6-8a95f6253c8f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Date          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="120" width="74" height="23" uuid="25b37842-ec57-436c-b733-bbd79c3bf806"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ReturnDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="150" width="130" height="20" uuid="969f2277-0c3b-4b66-8bc7-1d5ab2b3d2f2"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Cost          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="150" width="74" height="22" uuid="7083d2d9-6c8d-4d2d-9786-07737b5028bf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ReturnCost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="180" width="130" height="20" uuid="88b5bf57-e7e8-464b-8700-9c3597a1bdc8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BookQty                :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="180" width="83" height="19" uuid="6f600ed2-96ef-4e20-9eef-55d113570d04"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BookQty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="180" y="0" width="90" height="19" uuid="935ec6ba-4fd0-4d11-961f-2474fd5cb7ce"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="18" width="90" height="14" uuid="a6707d8b-87da-4111-bca0-0908306e190e"/>
+				<text><![CDATA[Software By Hansi]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
